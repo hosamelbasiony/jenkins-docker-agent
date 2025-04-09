@@ -10,6 +10,10 @@ agent { dockerContainer true }
      }  
  
     stage('SAST'){
+	agent {
+            dockerfile {
+            filename 'Dockerfile'
+        }
       steps{
       	sh 'echo SAST stage'
 	   }
