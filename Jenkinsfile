@@ -1,6 +1,7 @@
 pipeline {
    agent none
 
+    stages {
     stage('Cloning Git') {
 	    steps{
 	      sh 'echo checking out source code'
@@ -16,5 +17,6 @@ pipeline {
       	sh 'echo SAST stage'
 	   }
     }
+}
 }
 }
