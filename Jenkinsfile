@@ -1,6 +1,6 @@
 pipeline {
     agent { 
-        dockerfile {    // Pick up the DockerFile in root repo. And excute every command inside the container
+        dockerContainer {    // Pick up the DockerFile in root repo. And excute every command inside the container
             args '-u root:sudo'  // Run docker run commands with these args
         } 
     }
